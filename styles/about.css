@@ -1,0 +1,376 @@
+/********** Fonts **********/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #272829;
+}
+
+/********** Header **********/
+
+header {
+    left: 0;
+    width: 100%;
+    padding: 10px 40px;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0 0 15px 15px;
+}
+
+.logo img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #fff;
+}
+
+/********** Navigation **********/
+
+.navigation {
+    z-index: 1;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation a {
+    margin: 0 50px;
+    position: relative;
+    font-size: 1.2em;
+    color: #9E9FA5;
+    text-decoration: none;
+    font-weight: 600;
+    text-emphasis-style: bold;
+    position: relative;
+    overflow: hidden;
+}
+
+.navigation a:before,
+.navigation a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 2px;
+    background-color: #ffffff;
+    transition: transform 0.4s ease-in-out;
+}
+
+.navigation a:before {
+    left: 0;
+    transform: translateX(-100%);
+}
+
+.navigation a:after {
+    right: 0;
+    transform: translateX(100%);
+}
+
+.navigation a:hover:before {
+    transform: translateX(0);
+}
+
+.navigation a:hover:after {
+    transform: translateX(0);
+}
+
+#nav-menu {
+    z-index: 999;
+    display: none;
+}
+
+
+/********** Footer **********/
+
+.footer {
+    width: 100%;
+    background-color: #000000;
+    padding: 10px 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.footer .container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: auto;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+/********** Footer Page Links **********/
+
+.page-links {
+    margin-left: 20%;
+}
+
+.page-links ul {
+    margin-top: 20px;
+}
+
+.page-links h4 {
+    font-size: 17px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 400;
+    position: relative;
+    margin-top: 50px;
+}
+
+.page-links .logo {
+    font-size: 17px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 400;
+    position: relative;
+}
+
+.page-links ul li a {
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 300;
+    color: #ffffffbb;
+    display: block;
+}
+
+.page-links ul li a:hover {
+    color: #fff;
+}
+
+/********** Footer Contact Links **********/
+
+.contactLinks i {
+    margin-right: 10px;
+    padding: 10px;
+    display: inline;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    line-height: 40px;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.contactLinks a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+/********** Footer Copyright **********/
+
+.copyright {
+    padding: 30px 0 0;
+    font-weight: 300;
+    font-size: small;
+    text-align: center;
+    color: #ffffffb1;
+    transition: all 0.5s ease-in-out;
+}
+
+.copyright:hover {
+    cursor: pointer;
+    transition: all 0.5s ease;
+    color: #000000;
+}
+
+/********** Tablet View **********/
+
+@media only screen and (max-width: 1024px) {
+
+    .navigation {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.507);
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        backdrop-filter: blur(20px);
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+
+    .navigation.mobile-menu {
+        margin-left: 0;
+    }
+
+    #nav-menu {
+        right: 30px;
+        position: absolute;
+        display: block;
+        font-size: 30px;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+    .navigation a {
+        font-size: 1rem;
+        text-transform: uppercase;
+        margin: 20px 0;
+        align-items: center;
+    }
+
+    .footer .container {
+        grid-template-columns: 50% 50%;
+    }
+
+}
+
+/********** Mobile View **********/
+
+@media only screen and (max-width: 768px) and (min-width: 480px) {
+
+    .footer .container {
+        grid-template-columns: 100%;
+    }
+
+}
+
+/********** About Page CSS **********/
+
+.heading {
+    text-align: center;
+    justify-content: center;
+    font-size: 35px;
+    color: #d8d8d8;
+}
+
+.heading img {
+    display: flex;
+    margin: 20px auto;
+    height: 100px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #9E9FA5;
+}
+
+.content {
+    padding-left: 20px;
+}
+
+.info-main-1 {
+    color: #d8d8d8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px auto;
+    width: 80%;
+}
+
+.info-main-1 h2 {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.info-main-1 p {
+    margin-left: 20%;
+    text-align: justify;
+    font-size: 20px;
+    width: 60%;
+    margin-top: 1%;
+}
+
+/********** Tablet View **********/
+
+@media only screen and (max-width: 1024px) {
+    .heading {
+        font-size: 20px;
+    }
+
+    .content {
+        padding-left: 20px;
+    }
+
+    .info-main-1 {
+        margin: 50px auto;
+        width: 80%;
+    }
+
+    .info-main-1 h2 {
+        font-size: 30px;
+        margin-left: 5%;
+    }
+
+    .info-main-1 video {
+        height: auto;
+        width: 40%;
+        border-radius: 10px;
+    }
+
+    .info-main-1 p {
+        text-align: justify;
+        margin-left: 15%;
+        font-size: 20px;
+        width: 75%;
+        margin-top: 1%;
+    }
+
+    iframe {
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+        height: 40vh;
+        border-radius: 10px;
+        border: none;
+        margin-bottom: 20px;
+    }
+}
+
+/********** Mobile View  **********/
+
+@media only screen and (max-width: 768px) and (min-width: 480px) {
+    .heading {
+        font-size: 20px;
+    }
+
+    .content {
+        padding-left: 20px;
+    }
+
+    .info-main-1 {
+        margin: 50px auto;
+        width: 100%;
+    }
+
+    .info-main-1 h2 {
+        font-size: 25px;
+        margin-right: 10%;
+    }
+
+    .info-main-1 p {
+        text-align: justify;
+        margin-left: 20%;
+        font-size: 15px;
+        width: 60%;
+        margin-top: 20px;
+    }
+
+    iframe {
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+        height: 30vh;
+        border-radius: 10px;
+        border: none;
+        margin-bottom: 20px;
+    }
+}
